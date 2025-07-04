@@ -121,11 +121,12 @@ public class GameEngine {
     }
 
     private void gantiSenjata() {
-        System.out.println("\n=== Daftar Senjata ===");
-        for (int i = 0; i < senjataList.length; i++) {
-            System.out.println((i+1) + ". " + senjataList[i].getNama() + " (+" + senjataList[i].getDamage() + " damage)");
-        }
-        
+    System.out.println("\n=== Daftar Senjata ===");
+    for (int i = 0; i < senjataList.length; i++) {
+        System.out.println((i+1) + ". " + senjataList[i].getNama() + " (+" + senjataList[i].getDamage() + " damage)");
+    }
+    
+    try {
         System.out.print("Pilih senjata: ");
         int pilihan = scanner.nextInt();
         
@@ -133,9 +134,15 @@ public class GameEngine {
             pemain.setSenjata(senjataList[pilihan-1]);
             System.out.println("Senjata berhasil diganti ke " + pemain.getSenjata().getNama());
         } else {
-            System.out.println("Pilihan tidak valid!");
+            System.out.println("Pilihan harus antara 1-" + senjataList.length + "!");
         }
+    } catch (java.util.InputMismatchException e) {
+        System.out.println("Error: Harap masukkan angka!");
+        scanner.next(); // Bersihkan buffer input
+    } catch (Exception e) {
+        System.out.println("Error tidak terduga: " + e.getMessage());
     }
+}
 
     public static void main(String[] args) {
         GameEngine game = new GameEngine();
