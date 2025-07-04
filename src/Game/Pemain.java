@@ -1,6 +1,5 @@
 package Game;
 
-public class Pemain {
     public class Pemain extends Karakter {
     private int level;
     private int exp;

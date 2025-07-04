@@ -1,7 +1,6 @@
 package Game;
 
 public class Karakter {
-    public class Karakter {
     private String nama;
     private int health;
     private int attackPower;

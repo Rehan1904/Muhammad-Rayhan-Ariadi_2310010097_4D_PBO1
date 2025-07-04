@@ -1,6 +1,5 @@
 package Game;
 
-public class Senjata {
     public class Senjata {
     private String nama;
     private int damage;

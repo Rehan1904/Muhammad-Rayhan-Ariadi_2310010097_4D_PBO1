@@ -1,6 +1,5 @@
 package Game;
 
-public class Monster {
     public class Monster extends Karakter {
     private String jenis;
     private int expReward;

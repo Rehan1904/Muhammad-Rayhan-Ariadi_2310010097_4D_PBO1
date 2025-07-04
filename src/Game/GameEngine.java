@@ -1,8 +1,7 @@
 package Game;
 
-public class GameEngine {
-    import java.util.Scanner;
-    import java.util.Random;
+import java.util.Scanner;
+import java.util.Random;
 
 public class GameEngine {
     private Pemain pemain;
